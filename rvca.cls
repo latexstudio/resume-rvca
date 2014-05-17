@@ -32,12 +32,16 @@
 % \definecolor{themecolor}{RGB}{0,102,204}
 
 
+
+
 %%%
 %%% General settings 
 %%%
 
+
+
 %Margin settings
-\RequirePackage[left=6.1cm,top=3.3cm,right=1.9cm,bottom=2.5cm,nohead,nofoot]{geometry} 
+\RequirePackage[left=6.1cm,top=3.3cm,right=1.5cm,bottom=1.5cm,nohead,nofoot]{geometry} 
 
 %Hyperlinks
 \RequirePackage[colorlinks = true,
@@ -48,6 +52,8 @@
 % Using verdana font
 \renewcommand{\rmdefault}{pag}
 
+% Remove page numbers
+\pagestyle{empty} 
 
 %%%
 %%% Name Header
@@ -83,7 +89,7 @@
     \par\vspace{\baselineskip}{\Large ##1}
   }
   \begin{textblock}{4.0}(1.5, 3.7)
-  \begin{flushright}
+  \begin{flushright}    
   \obeycr
 }{
   \restorecr
@@ -150,11 +156,21 @@
 \newcommand{\workitem}[6]{
   \subsection[#1]{#1 \hfill #2}%
   \ifthenelse{\@full=1}{%
-    #3%
+    {\footnotesize #3}%
+    {\small
     \begin{itemize}%
       \item #4%
       \item #5%
       \item #6%
     \end{itemize}%
+    }
   }{}%
 }
+
+%%%
+%%% Images (power-ups like unicorns and ninjas, and QRCode)
+%%%
+
+\newcommand*{\UnicornIcon}{\includegraphics[scale=0.08]{img/UnicornIcon}}%
+\newcommand*{\NinjaIcon}{\includegraphics[scale=0.3]{img/NinjaIcon}}
+\newcommand*{\QrCode}{\includegraphics[scale=0.4]{img/qrcode}}
