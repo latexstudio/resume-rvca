@@ -123,7 +123,7 @@ Bachelor of Architecture, Industrial and Product Design
 
 \begin{tabular}{ p{4cm} p{4cm} p{4cm}} 
 HCI \NinjaIcon & Architecture  & Start-ups  \\
-IoT and Web & Software Development & Academic Writing\\
+IoT and Web & Software Development \NinjaIcon & Academic Writing\\
 % Curiosity & Quick Learner & Determination \\
 \end{tabular}  
 

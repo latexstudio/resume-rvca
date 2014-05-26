@@ -158,11 +158,11 @@
   \ifthenelse{\@full=1}{%
     {\footnotesize #3}%
     {\small
-%     \begin{itemize}%
-%       \item #4%
-%       \item #5%
-%       \item #6%
-%     \end{itemize}%
+    \begin{itemize}%
+      \item #4%
+      \item #5%
+      \item #6%
+    \end{itemize}%
     }
   }{}%
 }
