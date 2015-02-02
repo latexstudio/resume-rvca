@@ -29,6 +29,7 @@
 
 %Color of links and header box
 \definecolor{themecolor}{RGB}{255,145,0}
+\definecolor{linkcolor}{RGB}{109,62,0}
 % \definecolor{themecolor}{RGB}{0,102,204}
 
 
@@ -45,8 +46,8 @@
 
 %Hyperlinks
 \RequirePackage[colorlinks = true,
-            linkcolor = themecolor,
-            urlcolor  = themecolor,
+            linkcolor = linkcolor,
+            urlcolor  = linkcolor,
             citecolor = themecolor,
             anchorcolor = themecolor]{hyperref}
 % Using verdana font
@@ -158,11 +159,11 @@
   \ifthenelse{\@full=1}{%
     {\footnotesize #3}%
     {\small
-%     \begin{itemize}%
-%       \item #4%
-%       \item #5%
-%       \item #6%
-%     \end{itemize}%
+     \begin{itemize}%
+       \item #4%
+       \item #5%
+       %\item #6%
+     \end{itemize}%
     }
   }{}%
 }
