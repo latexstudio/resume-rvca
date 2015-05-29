@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.16)  27 JAN 2015 21:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.6)  29 MAY 2015 11:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -39,7 +39,7 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 (/usr/share/texmf/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-(/etc/texmf/tex/latex/config/color.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -96,8 +96,8 @@ Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/etc/texmf/tex/latex/config/graphics.cfg
-File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 )
@@ -501,6 +501,21 @@ File: ot1pag.fd 2001/06/04 font definitions for OT1/pag.
 \makeMPintoPDFobject=\count125
 \everyMPtoPDFconversion=\toks28
 ) ABD: EveryShipout initializing macros
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -509,15 +524,15 @@ File: ot1pag.fd 2001/06/04 font definitions for OT1/pag.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(173.56198pt, 398.0539pt, 42.67912pt)
-* v-part:(T,H,B)=(93.89418pt, 658.39668pt, 42.67912pt)
+* h-part:(L,W,R)=(173.56198pt, 406.5898pt, 34.14322pt)
+* v-part:(T,H,B)=(85.35826pt, 675.4685pt, 34.14322pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=398.0539pt
-* \textheight=658.39668pt
+* \textwidth=406.5898pt
+* \textheight=675.4685pt
 * \oddsidemargin=101.29199pt
 * \evensidemargin=101.29199pt
-* \topmargin=21.62419pt
+* \topmargin=13.08827pt
 * \headheight=0.0pt
 * \headsep=0.0pt
 * \topskip=10.0pt
@@ -553,68 +568,58 @@ LaTeX Info: Redefining \nameref on input line 3.
 \@outlinefile=\write4
 \openout4 = `cv.out'.
 
- <img/qrcode.png, id=55, 301.125pt x 301.125pt>
+ <img/qrcode.png, id=61, 301.125pt x 301.125pt>
 File: img/qrcode.png Graphic file (type png)
 
 <use img/qrcode.png>
-Package pdftex.def Info: img/qrcode.png used on input line 15.
+Package pdftex.def Info: img/qrcode.png used on input line 17.
 (pdftex.def)             Requested size: 120.44786pt x 120.44786pt.
 
-Overfull \hbox (6.63689pt too wide) in paragraph at lines 15--15
+Overfull \hbox (6.63689pt too wide) in paragraph at lines 17--17
  [][]
  []
 
-<img/NinjaIcon.png, id=58, 32.12pt x 32.12pt>
-File: img/NinjaIcon.png Graphic file (type png)
- <use img/NinjaIcon.png>
-Package pdftex.def Info: img/NinjaIcon.png used on input line 25.
-(pdftex.def)             Requested size: 9.63606pt x 9.63606pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--40
+Underfull \hbox (badness 10000) in paragraph at lines 44--47
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+pag on input line 65.
+LaTeX Font Info:    Try loading font information for OMS+pag on input line 72.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omspag.fd
 File: omspag.fd 
 )
 LaTeX Font Info:    Font shape `OMS/pag/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 65.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 72.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img/qrcode.png> <./img/N
-injaIcon.png>]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img/qrcode.png>]
 LaTeX Font Info:    Font shape `OT1/pag/m/it' in size <8> not available
-(Font)              Font shape `OT1/pag/m/sl' tried instead on input line 85.
-
-Overfull \hbox (11.54964pt too wide) in paragraph at lines 97--97
-\OT1/pag/m/n/8 chi-tec-ture prac-tice through mul-ti-dis-ci-plinary ex-plo-rati
-ons and built projects. [][]www.mimesisarquitectura.com[][] 
- []
-
+(Font)              Font shape `OT1/pag/m/sl' tried instead on input line 99.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 100.
+(Font)              <7> on input line 114.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 100.
+(Font)              <5> on input line 114.
+
+<img/NinjaIcon.png, id=76, 32.12pt x 32.12pt>
 File: img/NinjaIcon.png Graphic file (type png)
-<use img/NinjaIcon.png>
-Package pdftex.def Info: img/NinjaIcon.png used on input line 102.
+ <use img/NinjaIcon.png>
+Package pdftex.def Info: img/NinjaIcon.png used on input line 116.
 (pdftex.def)             Requested size: 9.63606pt x 9.63606pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
- [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 122.
+ [2 <./img/NinjaIcon.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 122.
  (./cv.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 122.
 Package rerunfilecheck Info: File `cv.out' has not changed.
-(rerunfilecheck)             Checksum: 9F1DFA1D89217F5CA1925A7B4993716E;923.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
+(rerunfilecheck)             Checksum: BB6BCF8EC857EEC418CDA054520D2F77;1013.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
  ) 
 Here is how much of TeX's memory you used:
- 14130 strings out of 495032
- 250514 string characters out of 6181718
- 328583 words of memory out of 5000000
- 17090 multiletter control sequences out of 15000+600000
+ 14245 strings out of 495028
+ 252763 string characters out of 6181498
+ 331903 words of memory out of 5000000
+ 17195 multiletter control sequences out of 15000+600000
  21766 words of font info for 34 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  63i,13n,57p,416b,497s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -622,9 +627,10 @@ Here is how much of TeX's memory you used:
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/avantgar/uagk8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/avantgar/uagko8a.pfb>
-Output written on cv.pdf (2 pages, 50577 bytes).
+Output written on cv.pdf (2 pages, 43894 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 15 named destinations out of 1000 (max. 500000)
- 119 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
+ 16 named destinations out of 1000 (max. 500000)
+ 127 words of extra memory for PDF output out of 10000 (max. 10000000)
 

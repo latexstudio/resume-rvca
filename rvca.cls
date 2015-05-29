@@ -42,7 +42,7 @@
 
 
 %Margin settings
-\RequirePackage[left=6.1cm,top=3.3cm,right=1.5cm,bottom=1.5cm,nohead,nofoot]{geometry} 
+\RequirePackage[left=6.1cm,top=3.0cm,right=1.2cm,bottom=1.2cm,nohead,nofoot]{geometry} 
 
 %Hyperlinks
 \RequirePackage[colorlinks = true,
