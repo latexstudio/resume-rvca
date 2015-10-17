@@ -7,7 +7,7 @@
 
 %% Options, full prints out full work items
 \newcommand{\@full}{0}
-\DeclareOption{full}{ 
+\DeclareOption{full}{
   \renewcommand{\@full}{1}
 }
 \DeclareOption*{%
@@ -21,40 +21,47 @@
 \RequirePackage{xcolor}
 \RequirePackage{tikz}
 \RequirePackage{ifthen}
-
+\RequirePackage{enumitem}
 
 %%%
-%%% Configuration 
+%%% Configuration
 %%%
 
 %Color of links and header box
-\definecolor{themecolor}{RGB}{255,145,0}
-\definecolor{linkcolor}{RGB}{109,62,0}
+ \definecolor{themecolor}{RGB}{166,53,176}
+%\definecolor{themecolor}{RGB}{66,159,184}
+
+%text colour
+ \definecolor{themetextcolor}{RGB}{132,41,140}
+%\definecolor{themetextcolor}{RGB}{59,106,118}
+
+
 % \definecolor{themecolor}{RGB}{0,102,204}
 
 
 
 
+
 %%%
-%%% General settings 
+%%% General settings
 %%%
 
 
 
 %Margin settings
-\RequirePackage[left=6.1cm,top=2.8cm,right=1.2cm,bottom=1.2cm,nohead,nofoot]{geometry} 
+\RequirePackage[left=6.1cm,top=3.3cm,right=1.5cm,bottom=1.5cm,nohead,nofoot]{geometry}
 
 %Hyperlinks
 \RequirePackage[colorlinks = true,
-            linkcolor = linkcolor,
-            urlcolor  = linkcolor,
-            citecolor = themecolor,
-            anchorcolor = themecolor]{hyperref}
+            linkcolor = themetextcolor,
+            urlcolor  = themetextcolor,
+            citecolor = themetextcolor,
+            anchorcolor = themetextcolor]{hyperref}
 % Using verdana font
 \renewcommand{\rmdefault}{pag}
 
 % Remove page numbers
-\pagestyle{empty} 
+\pagestyle{empty}
 
 %%%
 %%% Name Header
@@ -76,6 +83,7 @@
   \vspace{-2\parskip}
 }
 
+
 %%%
 %%% Aside Panel for contact info
 %%%
@@ -88,8 +96,8 @@
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large ##1}
   }
-  \begin{textblock}{4.0}(1.5, 3.0)
-  \begin{flushright}    
+  \begin{textblock}{4.0}(1.5, 3.7)
+  \begin{flushright}
   \obeycr
 }{
   \restorecr
@@ -107,7 +115,7 @@
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large ##1}
   }
-  \begin{textblock}{14.3}(6.1, 3.8)
+  \begin{textblock}{13.6}(6.1, 4.5)
   \noindent
   \obeycr
 }{
@@ -121,25 +129,12 @@
 %%% Sections and Subsections
 %%%
 
-\titleformat{\section}         % Customise the \section command 
+\titleformat{\section}         % Customise the \section command
 {\Large\scshape\raggedright}   % Make the \section headers large (\Large),
                                % small capitals (\scshape) and left aligned (\raggedright)
 {}{0em}                        % Can be used to give a prefix to all sections, like 'Section ...'
 {}                             % Can be used to insert code before the heading
 [\color{themecolor}\titlerule] % Inserts a horizontal line after the heading
-
-%Subtitles  
-\titleformat{\subsection}
-{\large\scshape\raggedright}
-{}{0em}
-{}
-
-\newcommand{\datedsection}[2]{%
-  \section[#1]{#1 \hfill #2}%
-}
-\newcommand{\datedsubsection}[2]{%
-  \subsection[#1]{#1 \hfill #2}%
-}
 
 %Subtitles
 \titleformat{\subsection}
@@ -154,6 +149,12 @@
 {}
 
 
+\newcommand{\datedsection}[2]{%
+  \section[#1]{#1 \hfill #2}%
+}
+\newcommand{\datedsubsection}[2]{%
+  \subsection[#1]{#1 \hfill #2}%
+}
 
 %%%
 %%% Work Items
@@ -161,7 +162,6 @@
 
 % \workitem
 % {}%Company
-% {}%Title
 % {}%Dates
 % {}%Responsibilities
 % {}%Achievement(1)
@@ -202,25 +202,10 @@
 }
 
 
-\newcommand{\achievements}[4]{
-   \begin{itemize}%
-       \item [\NinjaIcon] #1%
-       \IfEmptyTF{#2}{}{\item [\NinjaIcon] #2}%
-       \IfEmptyTF{#3}{}{\item [\NinjaIcon] #3}%
-       \IfEmptyTF{#4}{}{\item [\NinjaIcon] #4}%
-     \end{itemize}
-}
 %%%
 %%% Images (power-ups like unicorns and ninjas, and QRCode)
 %%%
-\newcommand*{\HomeIcon}{\includegraphics[scale=0.05]{img/HomeIcon}}%
-\newcommand*{\EmailIcon}{\includegraphics[scale=0.05]{img/EmailIcon}}%
-\newcommand*{\TwitterIcon}{\includegraphics[scale=0.05]{img/TwitterIcon}}%
-\newcommand*{\GithubIcon}{\includegraphics[scale=0.05]{img/GithubIcon}}%
-\newcommand*{\LinkedinIcon}{\includegraphics[scale=0.05]{img/LinkedinIcon}}%
 
-\newcommand*{\HeartIcon}{\includegraphics[scale=0.04]{img/HeartIcon}}%
-\newcommand*{\UnicornIcon}{\includegraphics[scale=0.08]{img/UnicornIcon}}%
+\newcommand*{\UnicornIcon}{\includegraphics[scale=0.08]{img/UnicornBlackIcon}}%
 \newcommand*{\NinjaIcon}{\includegraphics[scale=0.3]{img/NinjaIcon}}
-
-\newcommand*{\QrCode}{\includegraphics[scale=0.39]{img/qrcode}}
+\newcommand*{\QrCode}{\includegraphics[scale=0.37]{img/qrcode}}
