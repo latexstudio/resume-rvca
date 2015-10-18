@@ -88,7 +88,7 @@
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large ##1}
   }
-  \begin{textblock}{4.0}(1.5, 3.0)
+  \begin{textblock}{4.5}(1.0, 3.0)
   \begin{flushright}    
   \obeycr
 }{
@@ -223,4 +223,5 @@
 \newcommand*{\UnicornIcon}{\includegraphics[scale=0.08]{img/UnicornIcon}}%
 \newcommand*{\NinjaIcon}{\includegraphics[scale=0.3]{img/NinjaIcon}}
 
-\newcommand*{\QrCode}{\includegraphics[scale=0.39]{img/qrcode}}
+\newcommand*{\QrCode}{\includegraphics[scale=0.7]{img/qrcode}}
+\newcommand*{\ghost}{\includegraphics[scale=1.0]{img/ghost}} %Empty image generating space
