@@ -232,6 +232,28 @@
        \IfEmptyTF{#4}{}{\item [\NinjaIcon] #4}%
      \end{itemize}
 }
+
+%%%
+%%% A riddle at the end of page 2, if full enabled
+%%%
+\newenvironment{riddle}{
+  \ifthenelse{\@full=1}{%
+    % Experimental side panel on second pagea
+    %Draw side band
+    \begin{tikzpicture}[remember picture,overlay]
+      \node [rectangle, fill=sidebandcolor, anchor=north west, minimum width=5.5cm, minimum height=2cm] (box) at (current page.north west){};
+    \end{tikzpicture}
+    \begin{textblock}{4.2}(0.6, 2.5)
+    \begin{flushright}
+    \QrCode
+    \end{flushright}
+    \end{textblock}
+    \begin{textblock}{4.3}(0.9, 25.0)
+    \scriptsize \centering A riddle to take away: What happens once every minute, twice every moment and not once in a thousand years?
+    \end{textblock}
+  }
+}
+
 %%%
 %%% Images (power-ups like unicorns and ninjas, and QRCode)
 %%%
