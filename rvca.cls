@@ -1,5 +1,6 @@
 % Based on the original idea by Friggeri found at
 % http://www.latextemplates.com/template/friggeri-resume-cv
+% Must be compiled using XeLatex (FontAwesome)
 
 \LoadClass[10pt]{article}
 \NeedsTeXFormat{LaTeX2e}
@@ -20,22 +21,29 @@
 \RequirePackage{titlesec}
 \RequirePackage{xcolor}
 \RequirePackage{tikz}
+\usetikzlibrary{shapes}
 \RequirePackage{ifthen}
-
+\RequirePackage{fontawesome}
+\RequirePackage{fontspec}
 
 %%%
 %%% Configuration 
 %%%
 
 %Color of links and header box
-\definecolor{sidebandcolor}{RGB}{204,204,204}
+%\definecolor{bandcolor}{RGB}{255,102,0} WEBSITECOLOR
 % \definecolor{themecolor}{RGB}{20,20,20}
-\definecolor{linkcolor}{RGB}{255,102,0}
-\definecolor{themecolor}{RGB}{255,102,0}
+% \definecolor{themecolor}{RGB}{255,102,0}
 % \definecolor{linkcolor}{RGB}{109,62,0}
 % \definecolor{themecolor}{RGB}{0,102,204}
 
+% \definecolor{sidebandcolor}{RGB}{221,212,188}
+\definecolor{sidebandcolor}{RGB}{61,60,58}
 
+\definecolor{sidebandtextcolor}{RGB}{255,255,255}
+\definecolor{bandcolor}{RGB}{251,168,39}
+\definecolor{titlecolor}{RGB}{61,60,58}
+\definecolor{linkcolor}{RGB}{112,112,112}
 
 
 %%%
@@ -45,19 +53,25 @@
 
 
 %Margin settings
-\RequirePackage[left=6.1cm,top=2.0cm,right=1.2cm,bottom=1.2cm,nohead,nofoot]{geometry} 
+\RequirePackage[left=5.8cm,top=2.0cm,right=1.2cm,bottom=1.2cm,nohead,nofoot]{geometry} 
 
 %Hyperlinks
 \RequirePackage[colorlinks = true,
             linkcolor = linkcolor,
             urlcolor  = linkcolor,
-            citecolor = themecolor,
-            anchorcolor = themecolor]{hyperref}
+            citecolor = linkcolor,
+            anchorcolor = linkcolor]{hyperref}
 % Using verdana font
-\renewcommand{\rmdefault}{pag}
+\renewcommand{\rmdefault}{pag} %PDFLatex Verdana
+\setmainfont{Liberation Sans} %Xelatex 
 
 % Remove page numbers
 \pagestyle{empty} 
+
+% Redefinition, symbol included in link:
+\let\orighref\href
+\renewcommand{\href}[2]{\orighref{#1}{#2\,\scriptsize{\faLink} }}
+
 
 %%%
 %%% Name Header
@@ -65,10 +79,10 @@
 
 \newcommand{\header}[3]{
   \begin{tikzpicture}[remember picture,overlay]
-    \node [rectangle, fill=themecolor, anchor=north, minimum width=\paperwidth, minimum height=3cm] (box) at (current page.north){};
+    \node [rounded rectangle west arc=none, fill=bandcolor, anchor=east, minimum width=\paperwidth-5cm, minimum height=2cm,xshift=0cm,yshift=-3.7cm] (box) at (current page.north east){};
     \node [anchor=center] (name) at (box) {
       \fontsize{40pt}{72pt}\color{white}\selectfont #1 #2
-      %\huge \color{white} #1 #2
+%      \huge \color{white} #1 #2
     };
     \node [anchor=north] at (name.south) {
       \fontsize{14pt}{24pt}\color{white}\selectfont #3
@@ -87,25 +101,18 @@
 \setlength{\TPHorizModule}{1cm}
 \setlength{\TPVertModule}{1cm}
 \newenvironment{aside}{
-
-\begin{tikzpicture}[remember picture,overlay]
-    \node [rectangle, fill=sidebandcolor, anchor=west, minimum width=6.0cm, minimum height=\paperheight] (box) at (current page.west){};
-    \node [anchor=center] (name) at (box) { };
-  \end{tikzpicture}
-  
-
+      %Draw side band
+      \begin{tikzpicture}[remember picture,overlay]
+	\node [rectangle, fill=sidebandcolor, anchor=west, minimum width=5.5cm, minimum height=\paperheight] (box) at (current page.west){};
+      \end{tikzpicture}
       \let\oldsection\section
       \renewcommand{\section}[1]{
 	\par\vspace{\baselineskip}{\Large ##1}
       }
-      \begin{textblock}{4.5}(1.0, 3.0)
+      \begin{textblock}{4.2}(1.0, 5.0)
       \begin{flushright}
-%       \color{white}
+      \color{sidebandtextcolor}
       \obeycr
-  
-  
-  
-  
 }{
   \restorecr
   \end{flushright}
@@ -137,11 +144,11 @@
 %%%
 
 \titleformat{\section}         % Customise the \section command 
-{\color{themecolor}\Large\scshape\raggedright}   % Make the \section headers large (\Large),
+{\color{titlecolor}\Large\raggedright\bfseries}   % Make the \section headers large (\Large),
                                % small capitals (\scshape) and left aligned (\raggedright)
 {}{0em}                        % Can be used to give a prefix to all sections, like 'Section ...'
-{}                             % Can be used to insert code before the heading
-[\color{themecolor}\titlerule] % Inserts a horizontal line after the heading
+{\uppercase}                             % Can be used to insert code before the heading
+[\color{titlecolor}{\titlerule[3pt]}] % Inserts a horizontal line after the heading
 
 %Subtitles  
 \titleformat{\subsection}

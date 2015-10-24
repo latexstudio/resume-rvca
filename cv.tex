@@ -1,46 +1,50 @@
 \documentclass[full]{rvca}
 
-\begin{document}
+% Compile with XeLatex
 
-% \header{roberto}{calderon}{ } % Your name and current job title/field
+\begin{document}
 
 % % % % % % % % % % % Begin Side Panel
 
 \begin{aside} % each new line forces a line break
-{\large ROBERTO CALDERON}
-\section{contact}
+\section{\uppercase{contact} }
 407-1028 Alberni St.
 Vancouver, BC.
 V6E1A3. Canada.
 +1 (778) 996 7359
 \ghost
 roberto@
-\href{http://calderonroberto.com}{calderonroberto.com}
-\TwitterIcon  \href{http://twitter.com/calderonroberto}{@calderonroberto} 
-\GithubIcon \href{https://github.com/calderonroberto}{@calderonroberto} 
-\LinkedinIcon \href{https://ca.linkedin.com/in/calderonrobertocom}{calderonrobertocom} 
-% \ghost
+\href{http://calderonroberto.com}{\color{sidebandtextcolor}calderonroberto.com \faGlobe}
+\href{http://twitter.com/calderonroberto}{\color{sidebandtextcolor}@calderonroberto \faTwitter} 
+\href{https://github.com/calderonroberto}{\color{sidebandtextcolor}@calderonroberto \faGithub} 
+\href{https://ca.linkedin.com/in/calderonrobertocom}{\color{sidebandtextcolor}calderonrobertocom \faLinkedin} 
+\ghost
 % \QrCode
-% \ghost
-\section{In a nutshell}
+\ghost
+\section{\uppercase{in a nutshell}}
 Open-Minded\\Quick-learner\\Determined\\Explorer\\Creator 
 % 
-\section{interests}
+\section{\uppercase{interests}}
 SaaS, IoT, UI/UX, HCI, Startups, Innovation.
 %
-\section{skills}
+\section{\uppercase{skills}}
 Full-stack Web, UI/UX, 
 HCI, Research, Writing.
 % 
 % \section{human code}
 % English, Spanish, French
-\section{code}
-HTML5, CSS3, SASS/LESS, \HeartIcon Javascript, 
-\HeartIcon RoR, \HeartIcon NodeJS, LAMP,
-\HeartIcon Ruby, Python, \HeartIcon Go,
+\section{\uppercase{code}}
+HTML5, CSS3, SASS \& LESS, {\scriptsize\faHeart} Javascript, 
+{\scriptsize\faHeart} RoR, {\scriptsize\faHeart} NodeJS, LAMP,
+{\scriptsize\faHeart} Ruby, Python, {\scriptsize\faHeart} Go,
 MySQL, MongoDB, Redis,
-Java, C++, \HeartIcon Linux
+Java, C++, {\scriptsize\faHeart} Linux
 \end{aside}
+
+
+\header{roberto}{calderon}{ } % Your name and current job title/field
+
+
 
 % % % % % % % % % % Begin Main Content
 
@@ -155,7 +159,13 @@ M.Sc. Interdisciplinary Studies, HCI Specialization.
 Bachelor of Architecture, Industrial and Product Design
 
 % Experimental side riddle at the end of page.
-\begin{textblock}{3.5}(1.5, 25.0)
+% \begin{textblock}{3.5}(1.5, 25.0)
+
+%Draw side band
+\begin{tikzpicture}[remember picture,overlay]
+  \node [rectangle, fill=sidebandcolor, anchor=north west, minimum width=5.5cm, minimum height=2cm] (box) at (current page.north west){};
+\end{tikzpicture}
+\begin{textblock}{4.3}(0.9, 25.0)
 \scriptsize \centering A riddle to take away: What happens once every minute, twice every moment and not once in a thousand years?
 \end{textblock}
 
