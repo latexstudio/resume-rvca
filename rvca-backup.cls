@@ -28,11 +28,8 @@
 %%%
 
 %Color of links and header box
-\definecolor{sidebandcolor}{RGB}{204,204,204}
-% \definecolor{themecolor}{RGB}{20,20,20}
-\definecolor{linkcolor}{RGB}{255,102,0}
-\definecolor{themecolor}{RGB}{255,102,0}
-% \definecolor{linkcolor}{RGB}{109,62,0}
+\definecolor{themecolor}{RGB}{255,145,0}
+\definecolor{linkcolor}{RGB}{109,62,0}
 % \definecolor{themecolor}{RGB}{0,102,204}
 
 
@@ -87,25 +84,13 @@
 \setlength{\TPHorizModule}{1cm}
 \setlength{\TPVertModule}{1cm}
 \newenvironment{aside}{
-
-\begin{tikzpicture}[remember picture,overlay]
-    \node [rectangle, fill=sidebandcolor, anchor=west, minimum width=6.0cm, minimum height=\paperheight] (box) at (current page.west){};
-    \node [anchor=center] (name) at (box) { };
-  \end{tikzpicture}
-  
-
-      \let\oldsection\section
-      \renewcommand{\section}[1]{
-	\par\vspace{\baselineskip}{\Large ##1}
-      }
-      \begin{textblock}{4.5}(1.0, 3.0)
-      \begin{flushright}
-%       \color{white}
-      \obeycr
-  
-  
-  
-  
+  \let\oldsection\section
+  \renewcommand{\section}[1]{
+    \par\vspace{\baselineskip}{\Large ##1}
+  }
+  \begin{textblock}{4.5}(1.0, 3.0)
+  \begin{flushright}    
+  \obeycr
 }{
   \restorecr
   \end{flushright}
@@ -122,7 +107,7 @@
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large ##1}
   }
-  \begin{textblock}{14.3}(6.1, 1)
+  \begin{textblock}{14.3}(6.1, 3.8)
   \noindent
   \obeycr
 }{
@@ -137,7 +122,7 @@
 %%%
 
 \titleformat{\section}         % Customise the \section command 
-{\color{themecolor}\Large\scshape\raggedright}   % Make the \section headers large (\Large),
+{\Large\scshape\raggedright}   % Make the \section headers large (\Large),
                                % small capitals (\scshape) and left aligned (\raggedright)
 {}{0em}                        % Can be used to give a prefix to all sections, like 'Section ...'
 {}                             % Can be used to insert code before the heading
