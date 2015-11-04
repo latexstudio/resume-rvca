@@ -109,7 +109,7 @@
       \renewcommand{\section}[1]{
 	\par\vspace{\baselineskip}{\Large ##1}
       }
-      \begin{textblock}{4.2}(1.0, 5.0)
+      \begin{textblock}{4.5}(0.7, 5.0)
       \begin{flushright}
       \color{sidebandtextcolor}
       \obeycr
